@@ -1,0 +1,129 @@
+{
+  "title": "Shadowblade Valoria",
+  "hook": "Master silent stealth rooftop strikes",
+  "game_overview": "A nostalgic 16-bit side-scrolling stealth-action platformer where assassin Kael infiltrates the sunlit rooftops of Valoria to eliminate a corrupt captain.",
+  "artstyle": "pixelated",
+  "genre": "action_adventure",
+  "winning_condition": "Defeat the corrupt Guard Captain in the fortified district and escape through the Eastern Gate.",
+  "losing_condition": "Player health reaches zero from enemy strikes or falling into deadly drop zones.",
+  "player_mode": "single_player",
+  "supported_orientations": [
+    "landscape",
+    "wide"
+  ],
+  "input_methods": [
+    "touch",
+    "keyboard",
+    "mouse",
+    "dpad"
+  ],
+  "score_options": {
+    "score_type": "points",
+    "score_order": "higher_is_better"
+  },
+  "low_end_device_support": true,
+  "mobile_playable": true,
+  "tv_playable": true,
+  "language": [
+    "en"
+  ],
+  "content_descriptors": [
+    "violence"
+  ],
+  "controls": [
+    {
+      "input": "A / D or Left / Right Arrow Keys",
+      "action": "Move left and right across rooftops and platforms."
+    },
+    {
+      "input": "W or Up Arrow Key / Spacebar",
+      "action": "Jump across gaps, grab ledges, pull up, or climb ladders and vertical surfaces."
+    },
+    {
+      "input": "S or Down Arrow Key",
+      "action": "Crouch behind environmental cover, sneak, or drop down through semitransparent ledges."
+    },
+    {
+      "input": "J Key / Mobile Attack Button",
+      "action": "Perform standard sword strike and 3-hit melee sword combination."
+    },
+    {
+      "input": "K Key / Mobile Block Button",
+      "action": "Raise defensive sword block to deflect incoming attacks, or dodge roll while moving."
+    },
+    {
+      "input": "E Key / Mobile Stealth Button",
+      "action": "Execute contextual stealth assassination from behind or aerial takedown from above."
+    },
+    {
+      "input": "Escape Key / Mobile Pause Icon",
+      "action": "Pause the game, view mission objectives, or toggle audio settings."
+    },
+    {
+      "input": "Virtual D-Pad & Action Buttons",
+      "action": "Comprehensive on-screen touch controls for fluid mobile traversal and combat."
+    }
+  ],
+  "sections": [
+    {
+      "title": "Design Pillars",
+      "content": "1. Nostalgic Java Action Heritage: Capture the vibrant golden-hour medieval atmosphere, responsive acrobatics, and tactical pacing reminiscent of classic 2007-2012 mobile platformers. 2. Fluid Kinetic Traversal: Movement feels crisp, organic, and predictable with ledge grabs, wall-climbs, and smooth parkour flow. 3. Rewarding Stealth & Combat Synergy: Players can choose silent ghost assassinations or fluid swordplay with parries, combos, and dodges.",
+      "summary": "Core emotional and mechanical tenets governing gameplay feel and presentation."
+    },
+    {
+      "title": "Core Loop",
+      "content": "Traverse the Valoria rooftops using parkour -> Observe guard patrol sightlines -> Execute stealth assassinations or engage in sword combat -> Collect hidden royal relics and potions -> Infiltrate the castle interior and defeat the Guard Captain -> Reach the Eastern Gate to complete the mission.",
+      "summary": "The moment-to-moment gameplay cycle from rooftop infiltration to escape."
+    },
+    {
+      "title": "Movement & Scrolling Alignment",
+      "content": "Scrolling Axis: Horizontal (Left-to-Right progression with vertical platforming layers). Asset Orientation: All humanoid sprites face right (3 o'clock) by default and flip horizontally (scaleX = -1) when moving left. Kinetics: Responsive gravity-based 2D platforming with solid acceleration, ledge detection for automatic mantle grabbing, ladder climbing mechanics, wall-slide/wall-jump arcs, and ground dodge roll. Camera: Smooth horizontal tracking with forward-looking deadzone that shifts ahead during sprints to telegraph rooftop gaps and enemy patrol cones.",
+      "summary": "Horizontal side-scrolling physics model, parkour kinetics, and camera tracking."
+    },
+    {
+      "title": "Stealth & Sensory AI System",
+      "content": "Enemies feature dual-layer sensory cones (Focal Vision: narrow long-range instant alert, Peripheral Vision: wide medium-range progressive awareness meter). Guards follow an explicit 4-stage Finite State Machine: 1. Unaware (regular patrol route with casual waypoint pauses), 2. Suspicious (question mark indicator above head, investigating noise or glimpse), 3. Searching (active patrol looking for disturbance), 4. Alert/Combat (exclamation indicator, drawing blade and chasing player). Sneaking behind an unaware guard or dropping from above prompts an instant contextual Stealth Assassination (E key) eliminating the guard instantly with a cinematic slice.",
+      "summary": "Guard sensory cones, 4-stage alert state machine, and silent takedown rules."
+    },
+    {
+      "title": "Combat & Defense System",
+      "content": "Player starts with 5 Health Points. Standard guards have 3 HP, while the Captain possesses 8 HP with armored hyper-armor phases. Light Attack (J) performs a 3-hit slash chain with hit-stop impact frames. Guard/Block (K) reduces damage by 80% and parries attacks when timed before impact, staggering the opponent. Dodge Roll grants brief invulnerability frames (i-frames) to bypass guard cleaves. Defeated guards drop score orbs and occasional health potions.",
+      "summary": "Responsive real-time melee sword combat mechanics and boss encounter rules."
+    },
+    {
+      "title": "Level 1: The Rooftops of Valoria",
+      "content": "The level begins atop Kael's vantage tower overlooking the golden sunset of Valoria. Section 1 (Tutorial Rooftops): Master running, jumping across chimneys, ledge mantling, and crouch cover. Section 2 (Alley Bridges & Climbing): Climb ivy-covered brick walls, navigate narrow wooden bridges, and execute a stealth takedown on an isolated sentry. Section 3 (Castle District Courtyard): Face paired guard patrols with options for shadow evasion or open swordfight. Section 4 (Captain's Keep & Boss Battle): Duel Guard Captain Malakor featuring sweeping heavy slashes and shield bash maneuvers. Section 5 (Eastern Gate Escape): Sprint past falling portcullis gates into the sunset to trigger victory.",
+      "summary": "Pacing, landmark layout, encounters, and progression structure of the introductory mission."
+    },
+    {
+      "title": "Visual Hierarchy & Layering",
+      "content": "Background Layer: 3-layer parallax with warm golden sunset sky, distant castle spires, and silhouette rooftops with desaturated tones. Playfield Layer: High-contrast sandstone blocks, terracotta roof tiles, wooden beams, lanterns, animated torches, and crisp 16-bit character sprites with distinct outlines. Foreground Layer: Subtle dust particles, flying birds, and silhouette roof gables. HUD Overlay: Diegetic medieval scroll frames displaying Kael's health gems, objective compass, stealth eye status icon, and score tally positioned safely in screen corners.",
+      "summary": "Strict visual separation between parallax backgrounds, playfield, and HUD overlay."
+    },
+    {
+      "title": "Characters & Enemies",
+      "content": "Protagonist (Kael): Agile assassin clad in charcoal hooded tunic, deep crimson scarf and sash, carrying a curved silver blade. Regular Guard (Valorian Sentry): Armored bipedal soldier equipped with iron helm, broadsword, and red tabard. Elite Boss (Captain Malakor): Heavy-armored commander wielding a gilded broadsword with high poise and telegraphed charge strikes.",
+      "summary": "Protagonist attributes, regular guards, and elite boss specifications."
+    },
+    {
+      "title": "Fairness Tools & Checkpoints",
+      "content": "Checkpoints automatically save player progress at safe rooftop bonfires with health replenishment. Overhead sensory gauges show guard awareness accumulation before full alarm. Attack windup flashes (white/red glints) telegraph guard swings to enable reliable parries and dodges.",
+      "summary": "Visual telegraphs, checkpoint respawns, and sensory indicators for player clarity."
+    },
+    {
+      "title": "Juice & Game Feel",
+      "content": "Anticipation Juice: Character squashes slightly before leaps, blade trails glow during sword combo strikes. State Change Juice: Crimson cloth ribbons flutter in wind, dust puffs on rooftop landings and rolls. Impact Juice: 3-frame hit stop on successful sword strikes, subtle camera shake on heavy strikes, and dynamic spark bursts on blade collisions.",
+      "summary": "Impact feedback, kinetic anticipation, particle systems, and audio layering."
+    },
+    {
+      "title": "Structural Integrity",
+      "content": "Title Screen (New Game, How to Play, Audio Mute Toggle, High Scores) -> Intro Cinematic Card -> Interactive Gameplay -> Pause Menu -> Mission Complete / Game Over Screens with instant restart buttons and performance star ratings.",
+      "summary": "Screen flow, persistent high scores, settings, and mission clear sequences."
+    },
+    {
+      "title": "Virtual Touch Controls Implementation",
+      "content": "Render on-screen virtual controls only when mobile is active using useIsMobile(). Left side: Floating D-Pad / Horizontal Left-Right arrows with touch-none class. Right side: Distinct Action Buttons (Jump, Attack, Block, Stealth Takedown). Wire up onPointerDown, onPointerUp, onPointerLeave, and onPointerCancel to prevent stuck inputs. Ensure high z-index and pointer-events-auto on action buttons only.",
+      "summary": "Mandatory mobile touchscreen overlay layout and pointer event handlers."
+    }
+  ]
+}
